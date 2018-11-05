@@ -22,14 +22,19 @@ $hostname=$_POST['server'];
 $itemkey='';
 
 function get_hostid($hostname,$api){
-	$hosts = $api->hostGet(array(
+        $hosts = $api->hostGet(array(
         'output' => 'extend',
-        'filter' => array('name' => $hostname)));
-		foreach($hosts as $host)
+        'filter' => array('host' => $hostname)));
 
-	return $host->hostid;
+        foreach($hosts as $host){
+        $teste=$host->host;
+        if($teste==$hostname){
+        $retorno=$host->hostid;
+        };
+        return $retorno;
+
 }
-
+}
 
 
 function get_hostitemkey($hostid,$itemkey,$api){
