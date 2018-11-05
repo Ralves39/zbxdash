@@ -20,3 +20,29 @@ lembrando que se fez o download, deixe aquele RT maroto, para que eu possa conse
 
 Rodrigo Soares
 rodrigo_s.alves@hotmail.com
+
+
+English Version
+
+Created by Rodrigo Soares
+
+The history of zabbix items directly by a web page. No update and no database use for this.
+Only the item itemkey.
+
+Configuration
+1 - Download the software content directly to a www folder. From your apache server by issuing the following structure.
+/ var / www / zbxdash or / var / www / html / zbxdash
+
+2 - After the / var / www / zbxdash / conf folder, edit the conf.php file and the parameters in the variables.
+$ user_zbx = 'Admin'; // User with access to a zabbix api
+$ passwd = 'zabbix'; // password with access to a zabbix api
+$ ip_zbx = '127.0.0.1' // Access IP to a zabbix api
+
+Ready your zbxdash is enabled, access a screen by a URL http: //ipdoseuzabbix/zbxdash/windash.php
+
+I hope you enjoy it and any problems or your stuffing are there!
+
+remembering who downloaded it, who gave RT maroto, so I can get a nice job :)
+
+Rodrigo Soares
+rodrigo_s.alves@hotmail.com
