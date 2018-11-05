@@ -36,11 +36,19 @@ $dtfim=$dtfim." 23:59:59";
 
 
 function get_hostid($hostname,$api){
-	$hosts = $api->hostGet(array(
+        $hosts = $api->hostGet(array(
         'output' => 'extend',
-        'filter' => array('name' => $hostname)));
-	return $host->hostid;
+        'filter' => array('host' => $hostname)));
+
+        foreach($hosts as $host){
+        $teste=$host->host;
+        if($teste==$hostname){
+        $retorno= $host->hostid;
+        };
+        }
+        return $retorno;
 }
+
 
 function get_itemid($hostname,$hostid,$itemkey,$api){
 	$itens = $api->itemGet(array(
